@@ -1,0 +1,11 @@
+/* 
+	NotoSans kr
+
+	기본 : font-family: 'Noto Sans KR', sans-serif;	 font-weight:400;
+	굵기에 따라 : font-weight만 조정 
+
+	6가지 굵기로 사용가능 100(thin), 300(Light), 400(Regular), 500(Medium), 700(Bold), 900(Black) 
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');

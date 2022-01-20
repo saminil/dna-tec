@@ -1,0 +1,42 @@
+/* 
+	나눔 스퀘어 
+
+	기본 :font-family: 'NanumSquare', sans-serif; font-weight:400; 
+	굵기에 따라 : font-weight만 조정 
+
+	2가지 굵기로 사용가능 : 400(Regular) , 700(Bold)
+
+*/
+
+
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css); 
+
+
+/* 위 nanumsquare.css CDN이 작동하지 않으면 주석풀것
+
+	@font-face {
+		font-family: 'NanumSquare';
+		src: url('./fonts/NanumSquare/nanumsquarer.eot');
+		src: url('./fonts/NanumSquare/nanumsquarer.eot?#iefix') format('embedded-opentype'),
+			 url('./fonts/NanumSquare/nanumsquarer.woff2') format('woff2'),
+			 url('./fonts/NanumSquare/nanumsquarer.woff') format('woff'),
+			 url('./fonts/NanumSquare/nanumsquarer.ttf') format('truetype'),
+			 url('./fonts/NanumSquare/nanumsquarer.svg#nanumsquarerregular') format('svg');
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'NanumSquare';
+		src: url('./fonts/NanumSquare/nanumsquareb.eot');
+		src: url('./fonts/NanumSquare/nanumsquareb.eot?#iefix') format('embedded-opentype'),
+			 url('./fonts/NanumSquare/nanumsquareb.woff2') format('woff2'),
+			 url('./fonts/NanumSquare/nanumsquareb.woff') format('woff'),
+			 url('./fonts/NanumSquare/nanumsquareb.ttf') format('truetype'),
+			 url('./fonts/NanumSquare/nanumsquareb.svg#nanumsquarebregular') format('svg');
+		font-weight: 700;
+		font-style: normal;
+	}
+	
+
+*/

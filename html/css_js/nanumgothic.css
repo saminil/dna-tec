@@ -1,0 +1,12 @@
+/* 
+	나눔 고딕 
+
+	기본 : font-family: 'Nanum Gothic', sans-serif; font-weight:400; 
+	굵기에 따라 : font-weight만 조정 
+
+	3가지 굵기로 사용가능 : 400(Regular) , 700(Bold), 800(Extra Bold)
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');

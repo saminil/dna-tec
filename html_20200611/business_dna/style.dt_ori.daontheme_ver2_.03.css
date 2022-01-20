@@ -1,0 +1,84 @@
+/*사업영역 Type01 */
+.business { width:100%; max-width:1210px; overflow:hidden; margin:0 auto;  }
+.business:after { content:""; display:block; clear:both; }
+.business ul { padding:0; margin:0; }
+.business ul li { float:left; width:31.333333%; margin-left:1%; margin-right:1%; }
+.business ul li img { display:block; width:100%;}
+.business ul li strong { display:block; margin-top:20px; font-size:1.5em; font-weight:700; line-height:28px; text-align:center; }
+.business ul li > span { display:block; margin:20px 0; font-size:1em; text-align:center; letter-spacing:-0.04em; }
+
+
+/*사업영역 Type02 */
+.cross {width:100%; max-width:1200px; overflow:hidden;  margin:0 auto;  }
+.cross:after{ content:""; display:block; clear:both;}
+.cross ul {padding:0; margin:0; }
+.cross ul li{float:left; width:100%; overflow:hidden; margin-bottom:60px; }
+.cross ul li .cross_tit{font-size:2em;}
+.cross ul li .cross_txt{font-size:1.2em; padding-top:20px; }
+.cross ul li .cross_img{float:left; width:55%; height:340px; margin-bottom:0px; background:#f8f8f8;}
+.cross ul li .cross_img img{height:340px;}
+.cross ul li .cross_right{float:right; width:45%;  height:340px; background:#f8f8f8; padding:50px 50px 0 50px; box-sizing: border-box; }
+.cross ul li.other_type .cross_img{float:right; width:55%; height:340px; background:#f8f8f8; margin-bottom:00px; text-align:right;}
+.cross ul li.other_type .cross_right{float:left; width:45%;  height:340px; background:#f8f8f8; padding:50px 40px 0 50px; }
+.cross ul li.other_type .cross_img img{height:340px; }
+
+
+.btn_go {display:inline-block; background:#222; color:#fff; text-align:center;  font-size:1em; margin:20px 0px; padding:10px 30px; border:1px solid #000;  transition: 0.5s all ease; -webkit-transition: 0.5s all ease; -moz-transition: 0.5s all ease; -ms-transition: 0.5s all ease; -o-transition: 0.5s all ease;}
+.btn_go:hover {color:#000; background-color:#fff; }
+
+
+/* 반응형 중간기기 1200px 사이즈 이하*/
+@media all and (max-width:1200px){
+	
+	.cross {width:95%;}
+	.cross ul li .cross_tit{font-size:1.5em; }
+	.cross ul li .cross_txt{font-size:1em; }
+	.cross ul li .cross_img{ width:60%; height:250px; margin-bottom:0px;}
+	.cross ul li .cross_right{ width:40%;  height:250px; padding:30px 30px; margin-bottom:50px; }
+	.cross ul li .cross_img img{height:100%;}
+	.cross ul li.other_type .cross_img{ width:60%; height:250px; margin-bottom:0px;}
+	.cross ul li.other_type .cross_right{ width:40%; height:250px; padding:30px 30px; }
+	.cross ul li.other_type .cross_img img{height:100%;}
+
+}
+
+
+/* 반응형 중간기기 992px 사이즈 이하*/
+@media all and (max-width:992px){	
+
+
+}
+
+
+
+/* 반응형 중간기기 768사이즈 이하 */
+@media screen and (max-width: 768px) {		
+	
+	.business ul li { width:100%; margin-left:0px; margin-bottom:50px;}
+
+	.cross ul li{ width:100%; height:auto;}
+	.cross ul li .cross_img{float:left; width:100%; height:auto;}
+	.cross ul li .cross_img img{width:100%;}
+	.cross ul li .cross_right{width:100%; height:auto; padding:30px 20px; }
+	.cross ul li.other_type .cross_right{width:100%; height:auto;  padding:30px; 20px; }
+	.cross ul li.other_type .cross_img{float:right; width:100%; height:auto;}
+	.cross ul li.other_type .cross_img img{width:100%;}
+
+}
+
+
+
+/* 반응형 작은기기 480사이즈 이하 */
+@media screen and (max-width: 480px) {
+	
+	.vision ul li { width:100%;}
+
+}
+
+
+
+/* 반응형 작은기기 360사이즈 이하 */
+@media screen and (max-width: 360px) {	
+
+	
+}

@@ -1,0 +1,658 @@
+@viewport {
+    width: device-width;
+}
+
+/* 구글폰트 적용 예이지만, STANDARD 적용하여 주석처리함=>@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap&subset=korean'); */
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* 모바일에서 화면이 클 때는 자신의 크기를 유지하고 화면이 이미지의 크기보다 작아지면 화면크기에 맞춤*/
+.clearfix::before,
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+body {
+    background-image: url('../images/bg-cloud.png');
+    background-color: #dbeff0;
+}
+
+
+#wrap {
+    width: 100%;
+    /*height:1024px;*/
+    margin: 0 auto;
+    display: block;
+    background-color: #fff;
+    font-size: 0.8em;
+}
+
+
+/*RUS-TEST 메인 페이지.*/
+#header {
+    float: left;
+    width: 100%;
+    height: 149px;
+}
+
+#header .blank_img {
+    float: left;
+    width: 330px;
+    height: 31px;
+    background-image: url('../img/main_imgs/index_header_01.jpg');
+}
+
+/*------------//최상단 빈공간//----------- */
+#header .globalM {
+    float: left;
+    width: 950px;
+    height: 31px;
+    background-image: url('../img/main_imgs/index_header_02.jpg');
+}
+
+#header .globalM ul.ul_class {
+    position: relative;
+    width: 950px;
+    height: 31;
+    padding-top: 10px;
+    left: -45px;
+}
+
+#header .globalM ul.ul_class li {
+    float: right;
+    margin-right: 10px;
+}
+
+#header .globalM ul.ul_class li a {}
+
+/*------------//Global Menu : HOME, SITEMAP CONTACT lOGIN//----------- */
+
+#header .logo {
+    float: left;
+    width: 330px;
+    height: 118px;
+    float: left;
+}
+
+
+
+/* INDEX_HEADER_04.JPG 핑리 변경, 드롭다운메뉴-부드럽게 드롭다운 시작 */
+#header #nav {
+    float: left;
+    width: 950px;
+    height: 118px;
+    background-image: url('../img/main_imgs/index_header_04.jpg'); /*Main Menu BG 신규 변경*/
+}
+
+#header,
+#nav,
+.menu,
+.menu ul,
+.menu li,
+.menu a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+/* Menu */
+#header #nav .menu {
+    /* 메뉴 전체  */
+    position: relative;
+    right: 55px;
+    top: 30px;
+    float: right;
+    height: 50px;
+    width: 586px;
+
+    background: #0d6fa0;
+
+    background: -webkit-linear-gradient(top, #0d6fa0 0%, #0d6fa0 100%);
+    background: -moz-linear-gradient(top, #0d6fa0 0%, #0d6fa0 100%);
+    background: -o-linear-gradient(top, #0d6fa0 0%, #0d6fa0 100%);
+    background: -ms-linear-gradient(top, #0d6fa0 0%, #0d6fa0 100%);
+    background: linear-gradient(top, #0d6fa0 0%, #0d6fa0 100%);
+
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+
+    /* order-radius: 0px; 메뉴 배경 테두리  */
+
+}
+
+#header #nav .menu li {
+    position: relative;
+    list-style: none;
+    float: left;
+    /* 메인 멘뉴 가로 정렬 */
+    display: block;
+    height: 50px;
+}
+
+/* Links */
+
+#header #nav .menu li a {
+    display: block;
+    padding: 0 14px;
+    /* 앞 0은 상하 위치, 뒤 14는 메인 메뉴 좌우 간격 */
+    margin: 6px 0;
+    /* 메인 메뉴 상하 위치  */
+    line-height: 40px;
+    /* 메인화면 상하 위치  */
+    text-decoration: none;
+
+    border-left: 1px solid #5285C4;
+    /* 대메뉴 사이 구분선 */
+    border-right: 1px solid #003366;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    /* 메인메뉴와 서브 메뉴 폰트 크기 */
+
+    color: #f3f3f3;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+
+#header #nav .menu li:first-child a {
+    border-left: none;
+}
+
+#header #nav .menu li:last-child a {
+    border-right: none;
+}
+
+#header #nav .menu li:hover > a {
+    color: #8fde62;
+}
+
+/* 메뉴컬러:메인+서브 */
+
+
+
+/* Sub Menu 서브메뉴 */
+#header #nav .menu ul {
+    position: absolute;
+    top: 40px;
+    /*메인메뉴 배경과 서브 배경 간격*/
+    left: 0;
+    opacity: 0;
+
+    background: #0d6fa0;
+    /* 서브메뉴 배경 */
+
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+
+    -webkit-transition: opacity .25s ease .1s;
+    -moz-transition: opacity .25s ease .1s;
+    -o-transition: opacity .25s ease .1s;
+    -ms-transition: opacity .25s ease .1s;
+    transition: opacity .25s ease .1s;
+}
+
+#header #nav .menu li:hover > ul {
+    opacity: 1;
+}
+
+#header #nav .menu ul li {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    -webkit-transition: height .25s ease .1s;
+    -moz-transition: height .25s ease .1s;
+    -o-transition: height .25s ease .1s;
+    -ms-transition: height .25s ease .1s;
+    transition: height .25s ease .1s;
+}
+
+#header #nav .menu li:hover > ul li {
+    height: 46px;
+    /* 서브 메뉴 간 사이 크기*/
+    overflow: visible;
+    padding: 0;
+}
+
+#header #nav .menu ul li a {
+    width: 162px; /* 서브메뉴 좌우 배경 크기  */
+    padding: 4px 0 4px 40px;
+    margin: 0;
+    font-size: 15px;
+    /* 서브 메뉴 폰트 크기 */
+    border: none;
+    border-bottom: 1px solid #353539;
+}
+
+#header #nav .menu ul li:last-child a {
+    border: none;
+}
+
+/* Icons */
+#header #nav .menu a.documents {
+    background: url(/img/docs.png) no-repeat 6px center;
+}
+#header #nav .menu a.messages {
+    background: url(/img/bubble.png) no-repeat 6px center;
+}
+#header #nav .menu a.signout {
+    background: url(/img/arrow.png) no-repeat 6px center;
+}
+/*------------//Logo & mainMenu END//----------- */
+
+
+
+/*------------//메인 이미지, 슬라이드 시작//----------- */
+#content_a {
+    float: left;
+    width: 100%;
+    height: 545px;
+    background: #ffddaa;
+}
+
+#content_a .content_a_01 {
+    float: left;
+    width: 420px;
+    height: 236px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_01.jpg');
+}
+
+#content_a .content_a_02 {
+    float: left;
+    width: 294px;
+    height: 236px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_02.jpg');
+}
+
+#content_a .content_a_03 {
+    float: left;
+    width: 566px;
+    height: 236px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_03.jpg');
+}
+
+#content_a .content_a_04 {
+    float: left;
+    width: 420px;
+    height: 244px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_04.jpg');
+}
+
+#content_a .content_a_05 {
+    float: left;
+    width: 294px;
+    height: 244px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_05.jpg');
+}
+
+#content_a .content_a_06 {
+    float: left;
+    width: 566px;
+    height: 244px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_06.jpg');
+}
+
+#content_a .content_a_07 {
+    float: left;
+    width: 420px;
+    height: 65px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_07.jpg');
+}
+
+#content_a .content_a_08 {
+    float: left;
+    width: 294px;
+    height: 65px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_08.jpg');
+}
+
+#content_a .content_a_09 {
+    float: left;
+    width: 566px;
+    height: 65px;
+    float: left;
+    background-image: url('../img/main_imgs/index_content1_09.jpg');
+}
+/*------------//메인 이미지, 슬라이드 End //----------- */
+
+
+/*------------//메인 자료실, 공지사항, 인증서비스, 사업영역, 문의상담//----------- */
+#content_b {
+    float: left;
+    width: 100%;
+    height: 239px;
+}
+
+#content_b #cont1 {
+    float: left;
+    width: 511px;
+    height: 239px;
+}
+
+#content_b #cont1 .content_b_01 {
+    width: 511px;
+    height: 120px;
+    background-image: url('../img/main_imgs/content2_1_01.jpg');
+}
+
+#content_b #cont1 .content_b_01 {width: 511px;height: 119px;/*background-image: url('http://rustest.cafe24.com/img/main_imgs/content2_1_01.jpg')*/;}
+#content_b #cont1 .content_b_01 .content2_1_02_01{float:left;width: 209px;height: 119px;/*background-image: url('http://rustest.cafe24.com/img/main_imgs/content2_1_02_01.jpg');*/}
+#content_b #cont1 .content_b_01 .content2_1_02_02{float:left;width: 129px;height: 119px;/*background-image: url('http://rustest.cafe24.com/img/main_imgs/content2_1_02_02.jpg');*/}
+#content_b #cont1 .content_b_01 .content2_1_02_03{width: 173px;height: 119px;/*background-image: url('http://rustest.cafe24.com/img/main_imgs/content2_1_02_03.jpg');*/}
+
+
+
+#content_b .content_b_03 {/* 인증서비스|사업영역 */
+    float: left;
+    width: 476px;
+    height: 239px;
+    background-color:#fff;
+    /*background-image: url('../img/main_imgs/index3_02.jpg'); */
+}
+
+#content_b .content_b_04 {
+    float: left;
+    width: 293px;
+    height: 239px;
+    background-image: url('../img/main_imgs/index_content2_03.jpg');
+    /*   */
+}
+
+/*------------//메인 자료실, 공지사항, 인증서비스, 사업영역, 문의상담 End//----------- */
+
+
+html,body{
+    margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+#footer {
+    float: left;
+   /* width: 100%;*/
+    /*width:100%;*/
+    height: auto;
+}
+/*------- Footer 신규 종료  20200120 =>Reference https://webdevtrick.com/html-css-footer */
+
+
+.footer-distributed{
+	background-color: #0d6fa0;/* 배경 컬러: 서브페이지, 게시판 이외 적용 완료 */
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    position:relative;
+	box-sizing: border-box;
+	width: 100%;
+    height:100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+    display:inline-block;
+	padding: 20px 20px;
+	margin-top: 5px;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-distributed .footer-left{
+	width: 40%;
+}
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 26px 'Cookie', cursive;
+	margin: 0;
+}
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.1;
+	text-decoration: none;
+	color:  inherit;
+}
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+.footer-distributed .footer-center{
+	width: 35%;
+}
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 16px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+.footer-distributed .footer-center p a{
+	color:  #fff;
+	text-decoration: none;;
+}
+.footer-distributed .footer-right{
+	width: 20%;
+}
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+} 
+
+
+@media (max-width: 880px) {
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+}
+/*------- Footer 신규 종료  20200120 =>Reference https://webdevtrick.com/html-css-footer */
+
+
+/* 컨텐츠 - 인증 서비스 / 사업 영역 슬라이드 에코디언 효과   */
+
+
+/* Select Start  */
+/* Select END */
+
+
+
+
+
+/*  Tap 시작  */
+.tabbed_content {
+	background-color: #8495a6;
+	width: 417px;	
+    height:100px;
+	color:#aabbcc;
+    float:right;
+    font-size:15px;
+
+    position:relative;
+    right:17px;
+    /*border-radius:10px;*/
+    top:-20px;
+}
+/*  Tap  End   */
+
+
+
+/*  컨텐츠 중앙 : 인증서비스 | 사업영역 시작   */
+
+/* 좌우 이동 버튼 */
+a#next {left: 220px;line-height:50%;top:-125px;transition: all ease 0.5s;z-index:1000;}
+a#next:hover { left: 200px; line-height:50%;top:-125px;}
+a#previous {right: -70px;line-height:50%;top:0px;transition: all ease 0.5s;z-index:1000;}
+a#previous:hover { right: -50px; }
+
+.slider-demo {
+    position:relative;
+    left:-40px;
+    margin: 15px auto;/* 박스 전체 상하 위치 */
+    text-align: center;
+    width: 476px;
+    height:239;
+}
+
+.slider-demo a {
+  /*background-color: #ededed;*/
+  /*border-radius: 50%;*/
+  color: #444;
+  font-size: 5em;
+  line-height: 60px;
+  padding-bottom: 12px;
+  position: relative;
+  text-decoration: none;
+  width: 72px;
+  z-index: 2;
+}
+
+.slider-demo a:hover {
+  color: black;
+  /*background-color: #cdcdcd;*/
+}
+
+.slider-demo a,#slider-inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#slider-inner {
+  border: 7px solid white;/* 박스 테두리 */
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+  z-index: 5;
+}
+
+#slider-inner ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 1200px;
+}
+
+#slider-inner li {/* 박스 안  */
+  background-color: #88BC40;
+  font-size: 30px;
+  float: left;
+  width: 200px;
+  height: 190px;
+  line-height: 190px;
+  list-style: none;
+  margin: 0;
+  position: relative;
+}
+/*  컨텐츠 중앙 : 인증서비스 | 사업영역 종료   */

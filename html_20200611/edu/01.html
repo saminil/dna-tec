@@ -1,0 +1,118 @@
+<?php
+	include "../include/header.php"; 
+?>
+
+<?php 
+	/*	
+		기본 css(11~15라인)
+		기본 css 는 적용하지 않습니다. 
+	*/ 
+?>
+<style>
+	body,td,h1,h2,h3,h4,h5,div,p,li,ul,ol,dd,dt,section,input,textarea,select,button{margin:0;padding:0; font-size:15px; color:#333; line-height:1.6em; font-family: 'Noto Sans KR', sans-serif; font-weight:400; letter-spacing:-0.02em;}
+	body{padding-top:50px; padding-bottom:50px;}
+	ul,ol,li{margin:0;padding:0;list-style:none;}	
+</style>
+
+
+<?php
+	/*
+		CSS파일 로드(25~26라인)
+		구매하신 다온테마에 사용하신다면 적용하지 않아도 됩니다.
+		다온테마가 아닌 다른 곳에 적용하신다면 24번 라인은 공통 상단파일 </head> 위에 적용합니다.	
+	*/
+?>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+<?php
+	/*
+		주의사항 
+		그누보드 관리자모드 내용관리등 에디터로 내용을 등록하실 경우, 보안문제로 자바스크립트와 css가 필터될 수 있습니다.
+		이럴 경우 공통 css 파일에 아래 style을 별도 추가하고, 내용관리 에디터의 HTML 모드로 태그를 넣으시면 됩니다.(에디터마다 HTML 모드 버튼이 있으니 HTML 모드로 넣어주세요.)
+		javascript 를 사용한다면 공통하단 파일 </body> 위에 코드를 복사하여 추가 합니다.	
+	
+	*/
+?>
+<style>
+	/* 그누보드 내용관리등 에디터로 입력할 경우  여기서부터 */
+	.fc_pointer {color:#C53428; }
+	.content_wrap{width:100%; min-width:320px; margin:0 auto;}
+	.page_title{width:100%; margin-bottom:70px;}
+	.page_title h1{width:100%; margin:0 auto; text-align:center; font-size:2.5em; font-weight:600;}
+	.page_title h1:after {content:""; clear:both; display:block; width:30px; margin:10px auto; border:1px solid #000;}
+	.page_title h2{width:100%; margin:0 auto; text-align:center; font-size:1.2em; color:#666; margin-top:20px; }
+
+	.partner_type1{width:100%; min-width:320px; overflow:hidden;}
+	.partner_type1:after{content:""; clear:both; display:block;}
+	.partner_type1 .partner_img{width:100%; min-width:320px; height:500px; background: url('../image/img_2000.jpg') no-repeat center top; background-size:cover;}
+	.partner_type1 .partner_wrap {position:relative; top:-50px; width:100%; max-width:1200px; margin:0 auto;  background:#fff; overflow:hidden;}
+	.partner_type1 .partner_wrap .txt{text-align:center; padding-top:50px; font-size:1em; line-height:2em;}
+	.partner_type1 .partner_wrap .txt span{font-weight:700; font-size:1.4em;}
+	.partner_type1 .partner_list { width:100%; max-width:1100px; padding-top:50px; margin:0 auto;}
+	.partner_type1 .partner_list:after{content:""; clear:both; display:block;}
+	.partner_type1 .partner_list ul {width:100%; margin:0; padding:0; }
+	.partner_type1 .partner_list ul li {float: left; width:32%; padding:20px 0; margin:0 2% 2% 0; box-sizing: border-box; border: 1px solid #d6d6d6;  background: #fff; border-radius: 0px; text-align: center;}
+	.partner_type1 .partner_list ul li:nth-child(3n){margin-right:0;}
+	.partner_type1 .partner_list ul li img {max-width:100%; margin:0 auto;}
+
+		
+	@media screen and (max-width:992px){		
+		.content_wrap{width:100%;}
+		.page_title{margin-bottom:40px;}
+		.page_title h1{font-size:2em;}
+		.page_title h2{font-size:1em;}
+
+		.partner_type1 .partner_img{height:300px;}
+		.partner_type1 .partner_wrap{width:95%; top:-30px;}
+		.partner_type1 .partner_wrap .txt{width:90%; margin:0 auto; font-size:0.9em; padding-top:30px;}
+		.partner_type1 .partner_list {  width:92%; padding-top:30px;}
+		.partner_type1 .partner_list ul li { width:49%; margin:0 auto; margin-bottom:2%;}
+		.partner_type1 .partner_list ul li:nth-child(2n){float:right;}
+		.partner_type1 .partner_list ul li img {max-width:68%; margin:0 auto;}
+	}
+
+	@media screen and (max-width: 360px) {
+
+		.partner_type1 .partner_list ul li { width:100%; margin-bottom:5%;}
+
+	}
+	/*  여기까지 코드를 복사하여 공통 css파일 최하단에 추가합니다. */
+</style>
+
+
+<!-- /* 그누보드 내용관리등 에디터로 입력할 경우 여기서부터 */ -->
+<div class="content_wrap">
+	<div class="page_title">
+		<h1 class="sub_tit"><span class="fc_pointer">OUR</span> PARTNER</h1>
+		<h2 class="sub_txt">새로운 미래를 열어가는 다온테마</h2>
+	</div>
+
+	<div class="partner_type1">
+		<div class="partner_img"></div>
+		<div class="partner_wrap">
+			<div class="txt"><span>『다온테마와 공식 계약을 맺은 파트너를 소개합니다.』</span><br>더 빠르고 더 효과적으로 고객님의 브랜드와 가치를 높여드립니다.</div>
+			<div class="partner_list">
+			<ul>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+				<li><img src="../image/partner_img1.png"></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /* 여기까지 에디터의 HTML 모드로 등록합니다. */ -->
+
+
+<?php
+	include "../include/tail.php"; 
+?>
